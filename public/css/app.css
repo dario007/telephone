@@ -1,0 +1,23 @@
+ul > li > ul > a {
+     padding-left: 20px;
+ }
+
+ul > li > ul  {
+    padding-left: 0px;
+}
+
+/*nav > ul > li > ul > a {*/
+    /*font-size: 14px !important;*/
+    /*padding: 10px 40px !important;*/
+/*}*/
+
+/*.nav-item {*/
+    /*margin-bottom: 20px !important;*/
+/*}*/
+
+
+
+
+.input-group>.input-group-prepend>.input-group-text {
+    width: 150px;
+}
