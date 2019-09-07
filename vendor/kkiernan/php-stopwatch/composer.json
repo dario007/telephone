@@ -1,0 +1,22 @@
+{
+    "name": "kkiernan/php-stopwatch",
+    "license": "MIT",
+    "description": "A simple stopwatch in PHP",
+    "authors": [
+        {
+            "name": "Kelly Kiernan",
+            "email": "kelly@kellykiernan.com"
+        }
+    ],
+    "config": {
+		"bin-dir": ""
+	},
+	"autoload": {
+		"psr-4": {
+			"Kiernan\\": "src/Kiernan"
+		}
+	},
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
+}
