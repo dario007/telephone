@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    {% include 'frontend/_resources/css.twig' %}
+
+
+    <title>DIDA</title>
+</head>
+<body class="app sidebar-show">
+<!-- Header content here -->
+
+
+<header style="border-bottom: 1px solid #E4E5E6">
+
+    {% include 'frontend/_partials/header.twig' %}
+</header>
+
+
+<div class="app-body">
+
+    <!-- Sidebar content here -->
+    <div class="sidebar">
+        {% include 'frontend/_partials/sidebar.twig' %}
+    </div>
+
+    <main class="main">
+        <!-- Main content here -->
+        <div class="container-fluid">
+            {% block main_content %}{% endblock %}
+        </div>
+    </main>
+</div>
+
+<footer class="app-footer bg-dark">
+    {% include 'frontend/_partials/footer.twig' %}
+</footer>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
+{% include 'frontend/_resources/js.twig' %}
+
+
+
+
+</body>
+</html>

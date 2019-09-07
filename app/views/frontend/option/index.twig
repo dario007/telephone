@@ -1,0 +1,85 @@
+{% extends 'frontend/index.twig' %}
+
+{% block main_content %}
+
+    <div class="card">
+        <div class="card-header">Option Panel</div>
+        <div class="card-body">
+            Hier können Sie Rechte Verwalten
+        </div>
+    </div>
+
+    <form>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Rechte für</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Auswählen...</option>
+                <option value="1">Mittarbeiter</option>
+                <option value="2">Kunde</option>
+                <option value="3">Admin</option>
+            </select>
+        </div>
+
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <label type="text" class="form-control" aria-label="Text input with checkbox">Admin Panel</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <label type="text" class="form-control" aria-label="Text input with checkbox">Kunden Panel</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <label type="text" class="form-control" aria-label="Text input with checkbox">Kunden Panel</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <label type="text" class="form-control" aria-label="Text input with checkbox">Benutzer erstellen Panel</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <label type="text" class="form-control" aria-label="Text input with checkbox">Benutzer erstellen Panel</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" aria-label="Checkbox for following text input">
+                </div>
+            </div>
+            <label type="text" class="form-control" aria-label="Text input with checkbox">Optionen Panel</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Speichern</button>
+    </form>
+
+{% endblock %}
+
