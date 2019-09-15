@@ -1,0 +1,74 @@
+{% extends 'frontend/index.twig' %}
+
+{% block main_content %}
+
+    <div class="card">
+        <div class="card-header">Benutzer Panel</div>
+        <div class="card-body">
+            Hier können Sie Neue Benutzer Anlegen
+        </div>
+    </div>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Vorname</span>
+            </div>
+            <input type="text" class="form-control" name="first_name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Nachname</span>
+            </div>
+            <input type="text" class="form-control"name="last_name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Benutzername</span>
+            </div>
+            <input type="text" class="form-control" name="username">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">E-Mail</span>
+            </div>
+            <input type="email" class="form-control" name="email">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Telefonnummer</span>
+            </div>
+            <input type="text" class="form-control" name="phone">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Rufweiterleitung</span>
+            </div>
+            <input type="text" class="form-control" name="redirect">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Firma</span>
+            </div>
+            <input type="text" class="form-control" name="firm">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="right">Rechte</label>
+            </div>
+            <select class="custom-select" id="right" name="right">
+                <option selected>Auswählen...</option>
+                <option value="1">Mittarbeiter</option>
+                <option value="2">Kunde</option>
+                <option value="3">Admin</option>
+            </select>
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Speichern</button>
+    </form>
+
+{% endblock %}
+

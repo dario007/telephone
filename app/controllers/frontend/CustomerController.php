@@ -22,19 +22,66 @@ class CustomerController extends BaseController
 
 
 
+    public function updateAction($request, $response, $args)
+    {
+        $customer = Customer::where("id", "=", $args['id'] )->first();
 
-    public function updateAction($arg,$request, $response)
+        if($request->isPost())
+        {
+            $customer->first_name = $request->getParam('first_name');
+            $customer->last_name = $request->getParam('last_name');
+            $customer->username = $request->getParam('username');
+            $customer->email = $request->getParam('email');
+            $customer->phone = $request->getParam('phone');
+            $customer->redirect = $request->getParam('redirect');
+            $customer->right = $request->getParam('right');
+            $customer->firm = $request->getParam('firm');
+
+            $customer->save();
+
+            return $this->view->render($response, '/frontend/customer/index.twig');
+
+        }
+        else
+        {
+
+            $data =
+                [
+                    'customer' => $customer
+                ];
+
+            return $this->view->render($response, '/frontend/customer/update.twig', $data);
+        }
+
+    }
+
+    public function deleteAction($request, $response, $args)
     {
 
-        return $this->view->render($response, '/frontend/customer/update.twig');
+        $customer = Customer::where("id", "=", $args['id'] )->first();
+
+        if($request->isPost())
+        {
+
+            $customer->delete();
+
+            return $this->view->render($response, '/frontend/customer/index.twig');
+
+        }
+        else
+        {
+            $data =
+                [
+                    'customer' => $customer
+                ];
+
+            return $this->view->render($response, '/frontend/customer/delete.twig', $data);
+        }
+
+
     }
 
 
-    public function deleteAction($arg,$request, $response)
-    {
-
-        return $this->view->render($response, '/frontend/customer/delete.twig');
-    }
 }
 
 ?>

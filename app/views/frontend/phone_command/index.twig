@@ -1,0 +1,18 @@
+{% extends 'frontend/index.twig' %}
+
+{% block main_content %}
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly">
+    {% for command in phone_commands %}
+        <div class="card" style="width: 30%; margin: 15px">
+            <div class="card-header">
+                {{ command.title }}
+            </div>
+            <div class="card-body">
+                {{ command.command }}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+

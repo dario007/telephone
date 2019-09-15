@@ -1,3 +1,9 @@
+html:not([dir=rtl]) .sidebar,
+.sidebar {
+    margin-left: 0px !important;
+}
+
+
 ul > li > ul > a {
      padding-left: 20px;
  }

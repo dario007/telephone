@@ -4,6 +4,7 @@ namespace App\Controllers\frontend;
 use App\Models\Admin;
 use App\Models\User;
 use App\Models\Customer;
+use App\Models\PhoneCommands;
 
 
 class CreateController extends BaseController
@@ -20,13 +21,13 @@ class CreateController extends BaseController
             if($right == 1)
             {
                 $role = new User();
-                $role_name = 'mittarbeiter';
+                $role_name = 'user';
             }
 
             if($right == 2)
             {
                 $role = new Customer();
-                $role_name = 'kunde';
+                $role_name = 'customer';
             }
 
             if($right == 3)
@@ -53,6 +54,30 @@ class CreateController extends BaseController
         else
         {
             return $this->view->render($response, '/frontend/create/user.twig');
+        }
+
+
+
+    }
+
+    public function phoneCommandAction($request, $response)
+    {
+
+        if($request->isPost())
+        {
+
+            $phone_command = new PhoneCommands;
+            $phone_command->title = $request->getParam('title');
+            $phone_command->command = $request->getParam('command');
+            $phone_command->save();
+
+
+            return $this->view->render($response, '/frontend/create/phone_command.twig');
+
+        }
+        else
+        {
+            return $this->view->render($response, '/frontend/create/phone_command.twig');
         }
 
 

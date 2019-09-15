@@ -9,7 +9,7 @@ $app = new \Slim\App([
         'db' => [
             'driver' => 'mysql',
             'host' => 'localhost',
-            'database' => 'my_shop',
+            'database' => 'telephone',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',
@@ -17,8 +17,9 @@ $app = new \Slim\App([
             'prefix' => '',
         ] ,
         'app' => [
-            'base_url' => '/nbsp_tel/',
-            'img_url' => '/nbsp_tel/public/img/'
+            'base_url' => '/telephone/',
+            'img_url' => '/telephone/public/img/'
         ]
     ],
 ]);
+

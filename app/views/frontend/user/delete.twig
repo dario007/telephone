@@ -1,0 +1,16 @@
+{% extends 'frontend/index.twig' %}
+
+{% block main_content %}
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body">
+              Mitarbeiter <strong>{{ admin.first_name }} {{ admin.last_name }}</strong> löschen?
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-danger">Löschen</button>
+                <button type="submit" class="btn btn-primary">Zurück</button>
+            </div>
+    </form>
+{% endblock %}

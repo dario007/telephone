@@ -1,0 +1,26 @@
+{% extends 'frontend/index.twig' %}
+
+{% block main_content %}
+
+    <div class="card">
+        <div class="card-header">Telefonkommandos</div>
+    </div>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Titel</span>
+            </div>
+            <input type="text" class="form-control" name="title">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Kommando</span>
+            </div>
+            <input type="text" class="form-control"name="command">
+        </div>
+        <button type="submit" class="btn btn-primary">Speichern</button>
+    </form>
+
+{% endblock %}
+
