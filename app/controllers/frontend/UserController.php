@@ -2,7 +2,7 @@
 
 namespace App\Controllers\frontend;
 
-
+use App\Models\User;
 
 class UserController extends BaseController
 {
@@ -10,7 +10,14 @@ class UserController extends BaseController
     public function indexAction($request, $response)
     {
 
-        return $this->view->render($response, '/frontend/user/index.twig');
+        $users = User::get();
+
+        $data =
+            [
+                'users' => $users
+            ];
+
+        return $this->view->render($response, '/frontend/user/index.twig', $data);
     }
 
 
