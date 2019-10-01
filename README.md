@@ -7,8 +7,8 @@ telephone.sql
 
 TODO's:
 
-Login authentication
-Input Validation
-Delete Phone commands
-Option (User Rights)
+Login authentication,
+Input Validation,
+Delete Phone commands,
+Option (User Rights),
 
